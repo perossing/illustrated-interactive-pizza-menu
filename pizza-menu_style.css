@@ -1,0 +1,45 @@
+
+/* ===== STYLING TO SET UP HTML ===== */
+
+* {
+    /*border: 1px solid darkorange;*/
+    padding: 10px;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+.order-form {
+    background: lawngreen; 
+}
+
+.menu {
+    background: pink;
+}
+
+.button-container {
+    background: yellow;
+}
+
+button {
+    background: lightblue;
+}
+
+.cart {
+    background: turquoise;
+}
+
+.cart div {
+    background: lightsteelblue;
+    margin: 5px;
+}
+
+.itemInfo {
+   font-style: italic;
+}
+
+.priceInfo {
+    display: inline-block;
+    margin-bottom: 10px;
+}

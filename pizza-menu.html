@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <title>Pizza Time!</title>
+    <meta name="description" content="pizza-order menu" />
+    <meta name="author" content="Peter Rossing: TechAcademy lesson, May 2017" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" href="pizza-menu_style.css" />
+</head>
+
+<body>
+
+    <main class="container">
+
+        <form class="order-form">
+
+            <h1>place your order online!</h1>
+            <section class="menu pizza-size">
+                <h3>size:</h3>
+                <input type="radio" name="size" value="personal">
+                <span class="itemName">personal pizza
+                    <span class="itemInfo">( 8" )</span>
+                </span>
+                <span class="itemPrice">$6.00</span><br>
+
+                <input type="radio" name="size" value="medium"><span class="itemName">medium pizza
+                    <span class="itemInfo">( 12" )</span>
+                </span>
+                <span class="itemPrice">$10.00</span><br>
+
+                <input type="radio" name="size" value="large" checked><span class="itemName">large pizza
+                    <span class="itemInfo">( 16" )</span>
+                </span>
+                <span class="itemPrice">$14.00</span><br>
+
+                <input type="radio" name="size" value="extra large"><span class="itemName">extra-large pizza
+                    <span class="itemInfo">( 20" )</span>
+                </span>
+                <span class="itemPrice">$16.00</span><br>
+            </section>
+
+            <section class="menu meat">
+                <h3>meats:</h3>
+                <span class="priceInfo">one item included, each additional item + $1.00</span><br>
+                <input type="checkbox" name="meat" value="pepperoni">pepperoni<br>
+                <input type="checkbox" name="meat" value="sausage">sausage <br>
+                <input type="checkbox" name="meat" value="canadian bacon">canadian bacon<br>
+                <input type="checkbox" name="meat" value="ground beef">ground beef<br>
+                <input type="checkbox" name="meat" value="anchovy">anchovy<br>
+                <input type="checkbox" name="meat" value="chicken">chicken<br>
+            </section>
+
+            <section class="menu veggie">
+                <h3>veggies:</h3>
+                <span class="priceInfo">one item included, each additional item + $1.00</span><br>
+                <input type="checkbox" name="veggie" value="tomatoes">tomatoes<br>
+                <input type="checkbox" name="veggie" value="onions">onions <br>
+                <input type="checkbox" name="veggie" value="olives">olives<br>
+                <input type="checkbox" name="veggie" value="green peppers">green peppers<br>
+                <input type="checkbox" name="veggie" value="mushrooms">mushrooms<br>
+                <input type="checkbox" name="veggie" value="pineapple">pineapple<br>
+                <input type="checkbox" name="veggie" value="spinach">spinach<br>
+                <input type="checkbox" name="veggie" value="jalapeno">jalapeno<br>
+            </section>
+
+            <section class="menu cheese">
+                <h3>cheese:</h3>
+                <input type="radio" name="cheese" value="regular" checked>regular cheese<br>
+                <input type="radio" name="cheese" value="none">no cheese<br>
+                <input type="radio" name="cheese" value="extra">extra cheese
+                <span class="itemPrice">+ $3.00</span><br>
+            </section>
+
+            <section class="menu sauce">
+                <h3>sauce:</h3>
+                <input type="radio" name="sauce" value="marinara" checked>marinara sauce<br>
+                <input type="radio" name="sauce" value="white">white sauce<br>
+                <input type="radio" name="sauce" value="barbeque">barbeque sauce<br>
+                <input type="radio" name="sauce" value="none">no sauce<br>
+            </section>
+
+            <section class="menu crust">
+                <h3>crust:</h3>
+                <input type="radio" name="crust" value="garlic butter">garlic butter crust<br>
+                <input type="radio" name="crust" value="plain" checked>plain crust<br>
+                <input type="radio" name="crust" value="spicy">spicy crust<br>
+                <input type="radio" name="crust" value="house special">house special crust<br>
+                <input type="radio" name="crust" value="cheese-stuffed">cheese-stuffed crust
+                <span class="itemPrice">+ $3.00</span><br>
+            </section>
+
+        </form><br>
+
+        <div class="button-container">
+            <button onclick="showcharges()">view order</button>
+            <button onclick="resetmenu()">cancel</button>
+        </div>
+
+        <div class="cart">
+            <div id="orderList">
+                <h3>you ordered:</h3>
+                <!--will need to append ordered items here-->
+            </div>
+            <div id="orderPricing">
+                <h3>price:</h3>
+                <!--will need to append pricing items here-->
+            </div>
+            <div id="orderTotal">
+                <h3>total:</h3>
+            </div>
+            <details>
+                <summary>our guarantee:</summary>
+                <p>Ut id qui dolor ex enim adipisicing ullamco exercitation duis. In qui ullamco ex anim irure ipsum ea fugiat sit nostrud pariatur ipsum. Cillum laboris enim sunt irure qui.</p>
+            </details>
+            <button onclick="confirmOrder()">submit order</button>
+        </div>
+    </main>
+
+    <footer>...FOOTER INFO TO GO HERE...</footer>
+
+    <script src="xxxxx"></script>
+</body>
+
+
+
+</html>
