@@ -39,7 +39,43 @@ button {
    font-style: italic;
 }
 
+.cart span {
+    display: inline-block;
+}
+
 .priceInfo {
     display: inline-block;
     margin-bottom: 10px;
+}
+
+.itemized {
+    text-align: right;
+    margin-left: 25px;
+}
+
+table, th, td {
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+.orderTotal {
+    background: red;
+}
+
+.moneyFormat {
+    text-align: right;
+}
+
+.orderCategory {
+    font-weight: bold;
+    color: green;
+}
+
+.itemColumn {
+    width: 75%;
+}
+
+.priceColumn {
+    width: 25%;
 }

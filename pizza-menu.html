@@ -21,8 +21,7 @@
             <section id="size">
                 <h3>size:</h3>
                 <input type="radio" name="size" value="personal">
-                <span class="itemName">personal pizza
-                    <span class="itemInfo">( 8" )</span>
+                <span class="itemName">personal pizza<span class="itemInfo">( 8" )</span>
                 </span>
                 <span class="itemPrice">$6.00</span><br>
 
@@ -49,8 +48,8 @@
                 <input type="checkbox" name="meat" value="sausage">sausage <br>
                 <input type="checkbox" name="meat" value="canadian bacon">canadian bacon<br>
                 <input type="checkbox" name="meat" value="ground beef">ground beef<br>
-                <input type="checkbox" name="meat" value="anchovy">anchovy<br>
                 <input type="checkbox" name="meat" value="chicken">chicken<br>
+                <input type="checkbox" name="meat" value="anchovy">anchovy<br>
             </section>
 
             <section id="veggies">
@@ -84,8 +83,8 @@
 
             <section id="crust">
                 <h3>crust:</h3>
-                <input type="radio" name="crust" value="garlic butter">garlic butter crust<br>
                 <input type="radio" name="crust" value="plain" checked>plain crust<br>
+                <input type="radio" name="crust" value="garlic butter">garlic butter crust<br>
                 <input type="radio" name="crust" value="spicy">spicy crust<br>
                 <input type="radio" name="crust" value="house special">house special crust<br>
                 <input type="radio" name="crust" value="cheese-stuffed">cheese-stuffed crust
@@ -95,28 +94,41 @@
         </form><br>
 
         <div class="button-container">
-            <button onclick="getCheckedItems()">view order</button>
-            <button onclick="resetmenu()">cancel</button>
+            <button onclick="displayCheckedItems()">view order</button>
+            <button onclick="resetMenu()">cancel</button>
         </div>
 
         <div class="cart">
-            <div id="orderList">
-                <h3>you ordered:</h3>
-                <!--will need to append ordered items here-->
-            </div>
-            <div id="orderPricing">
-                <h3>price:</h3>
-                <!--will need to append pricing items here-->
-            </div>
-            <div id="orderTotal">
-                <h3>total:</h3>
-            </div>
+            <table>
+                <tr>
+                    <th class="itemColumn">your order:</th>
+                    <th class="priceColumn">price:</th>
+                </tr>
+                <!--insert rows w items & prices here-->
+            </table>
+            <table id="orderSummary">
+                <!--insert rows w items & prices here-->
+            </table>
+
+            <table>
+                <tr>
+                    <td class="moneyFormat itemColumn">ORDER TOTAL:</td>
+                    <td class="orderTotal priceColumn moneyForma">
+                        <!--insert total here-->
+                    </td>
+                </tr>
+            </table>
+
+
+
             <details>
                 <summary>our guarantee:</summary>
-                <p>Ut id qui dolor ex enim adipisicing ullamco exercitation duis. In qui ullamco ex anim irure ipsum ea fugiat sit nostrud pariatur ipsum. Cillum laboris enim sunt irure qui.</p>
+                <p>Ut id qui dolor ex enim adipisicing ullamco exercitation duis. In qui ullamco ex anim irure ipsum ea fugiat
+                    sit nostrud pariatur ipsum. Cillum laboris enim sunt irure qui.</p>
             </details>
             <button onclick="confirmOrder()">submit order</button>
         </div>
+
     </main>
 
     <footer>...FOOTER INFO TO GO HERE...</footer>
