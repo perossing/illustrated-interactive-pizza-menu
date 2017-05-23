@@ -18,7 +18,7 @@
         <form class="order-form">
 
             <h1>place your order online!</h1>
-            <section class="menu pizza-size">
+            <section id="size">
                 <h3>size:</h3>
                 <input type="radio" name="size" value="personal">
                 <span class="itemName">personal pizza
@@ -42,7 +42,7 @@
                 <span class="itemPrice">$16.00</span><br>
             </section>
 
-            <section class="menu meat">
+            <section id="meat">
                 <h3>meats:</h3>
                 <span class="priceInfo">one item included, each additional item + $1.00</span><br>
                 <input type="checkbox" name="meat" value="pepperoni">pepperoni<br>
@@ -53,7 +53,7 @@
                 <input type="checkbox" name="meat" value="chicken">chicken<br>
             </section>
 
-            <section class="menu veggie">
+            <section id="veggies">
                 <h3>veggies:</h3>
                 <span class="priceInfo">one item included, each additional item + $1.00</span><br>
                 <input type="checkbox" name="veggie" value="tomatoes">tomatoes<br>
@@ -66,7 +66,7 @@
                 <input type="checkbox" name="veggie" value="jalapeno">jalapeno<br>
             </section>
 
-            <section class="menu cheese">
+            <section id="cheese">
                 <h3>cheese:</h3>
                 <input type="radio" name="cheese" value="regular" checked>regular cheese<br>
                 <input type="radio" name="cheese" value="none">no cheese<br>
@@ -74,7 +74,7 @@
                 <span class="itemPrice">+ $3.00</span><br>
             </section>
 
-            <section class="menu sauce">
+            <section id="sauce">
                 <h3>sauce:</h3>
                 <input type="radio" name="sauce" value="marinara" checked>marinara sauce<br>
                 <input type="radio" name="sauce" value="white">white sauce<br>
@@ -82,7 +82,7 @@
                 <input type="radio" name="sauce" value="none">no sauce<br>
             </section>
 
-            <section class="menu crust">
+            <section id="crust">
                 <h3>crust:</h3>
                 <input type="radio" name="crust" value="garlic butter">garlic butter crust<br>
                 <input type="radio" name="crust" value="plain" checked>plain crust<br>
@@ -95,7 +95,7 @@
         </form><br>
 
         <div class="button-container">
-            <button onclick="showcharges()">view order</button>
+            <button onclick="getCheckedItems()">view order</button>
             <button onclick="resetmenu()">cancel</button>
         </div>
 
@@ -121,7 +121,7 @@
 
     <footer>...FOOTER INFO TO GO HERE...</footer>
 
-    <script src="xxxxx"></script>
+    <script src="pizza-menu.js"></script>
 </body>
 
 
