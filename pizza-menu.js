@@ -1,5 +1,3 @@
-
-
 /*
 // functions referenced in HTML onclick captureEvents:
 showCharges()
@@ -13,10 +11,13 @@ const pricing = {
     medium: 10,
     large: 14,
     xLarge: 20,
-    topping: 1,
-    premium: 3
+    'addl topping': 1,
+    'cheese-stuffed': 3,
+    'extra cheese': 3,
+    'no selections': 0
 };
 
+let thePrice = 0;
 
 // gets a NodeList  -- can't use map on this without converting to array with slice...
 const menuSections = document.querySelectorAll('form > section');
@@ -24,48 +25,101 @@ const menuSections = document.querySelectorAll('form > section');
 const orderTable = document.querySelector('#orderSummary');
 let cartVisible = false;
 
+// let menuArr = [];
+let orderArr = [];
+let meatToppings = 0;
+let veggieToppings = 0;
+
 const displayCheckedItems = () => {
     if (!cartVisible) {
         for (let i = 0; i < menuSections.length; i++) {
             createCategoryRows(i);
-            let menuOptions = menuSections[i].querySelectorAll('input');
+            const menuOptions = menuSections[i].querySelectorAll('input');
 
             for (let j = 0; j < menuOptions.length; j++) {
                 let itemsOrdered = '';
                 if (menuOptions[j].checked) {
                     itemsOrdered = menuOptions[j].value;
-                    createItemRows(menuOptions, itemsOrdered);
-                }
-                else if ((menuSections[i].id === "meat" || menuSections[i].id === "veggies") && j === 0) {
+
+                    if (menuSections[i].id === "meats") {
+                        meatToppings++;
+                    }
+                    if (menuSections[i].id === "veggies") {
+                        veggieToppings++;
+                    }
+
+                    createItemRows(menuOptions, itemsOrdered, i);
+                    // } else if (menuSections[i].id === "meats") {
+                } else if ((menuSections[i].id === "meats" || menuSections[i].id === "veggies") && j < 1) {
                     itemsOrdered = 'no selections';
-                    createItemRows(menuOptions, itemsOrdered);
+                    createItemRows(menuOptions, itemsOrdered, i);
                 }
             }
+
         }
+
+
+        getItemPrices();
     }
+
     cartVisible = true;
 };
 
+const createCategoryRows = (i) => {
+    const rowCategory = orderTable.insertRow();
+    rowCategory.setAttribute('class', 'orderCategory');
+    const cellCategory = rowCategory.insertCell(0);
+    cellCategory.setAttribute('class', 'itemColumn');
+    const menuHeading = menuSections[i].id;
+    cellCategory.innerHTML = menuHeading;
+    orderArr[i] = [];
+};
+
+const createItemRows = (menuOptions, itemsOrdered, i) => {
+    const rowItem = orderTable.insertRow();
+    const cellItem = rowItem.insertCell(0);
+    const cellPrice = rowItem.insertCell(1);
+    cellItem.setAttribute('class', 'itemColumn');
+    cellPrice.setAttribute('class', 'priceColumn itemPrice moneyFormat');
+    cellItem.innerHTML = itemsOrdered;
+    orderArr[i].push(itemsOrdered);
+};
+
+
+
+// priceCheck (needs better name) holds key to how many items have been selected in each category.
+
+//need to get setting/ inserting of price values in the right place in the loop
+
+// nest loops in other order?  track index of orderArr & priceArr without two loops?
+
+const getItemPrices = () => {
+    priceArr = document.querySelectorAll('.itemPrice');
+    for (let i = 0; i < orderArr.length; i++) {
+        console.log(i);
+        let priceCheck = orderArr[i];
+        console.log('priceCheck.length = ' + priceCheck.length);
+        console.log(priceCheck);
+
+        for (let n = 0; n < priceArr.length; n++) {
+            if (pricing[priceCheck] !== undefined) {
+                console.log(pricing[priceCheck]);
+                thePrice = pricing[priceCheck];
+            }
+            // else if (n === 1 && meatToppings > 1) {
+            //     // priceCheck = 'addl topping';
+            //     thePrice = 1;
+            // }
+            console.log('around again');
+            priceArr[n].innerHTML = '$ ' + thePrice + '.00';
+        }
+
+    }
+
+}
 
 const resetMenu = () => {
     orderTable.innerHTML = '';
     cartVisible = false;
-};
-
-const createCategoryRows = (i) => {
-    let rowCategory = orderTable.insertRow();
-    rowCategory.setAttribute('class', 'orderCategory');
-    let cellCategory = rowCategory.insertCell(0);
-    cellCategory.setAttribute('class', 'itemColumn');
-    let menuHeading = menuSections[i].id;
-    cellCategory.innerHTML = menuHeading;
-};
-
-const createItemRows = (menuOptions, itemsOrdered) => {
-    let rowItem = orderTable.insertRow();
-    let cellItem = rowItem.insertCell(0);
-    let cellPrice = rowItem.insertCell(1);
-    cellItem.setAttribute('class', 'itemColumn');
-    cellPrice.setAttribute('class', 'priceColumn');
-    cellItem.innerHTML = itemsOrdered;
+    // uncheck all inputs
 };
