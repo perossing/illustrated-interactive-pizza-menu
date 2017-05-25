@@ -20,7 +20,7 @@ const closeModalBtn = document.querySelector('.closeBtn');
 
 let orderArr = [];
 
-
+// Need preventDefault on viewOrderButton so browsers retain display settings for cartModal
 viewOrderButton.addEventListener('click', function(event){
     event.preventDefault()
 });
