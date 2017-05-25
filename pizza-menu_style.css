@@ -1,124 +1,246 @@
+/** {
+    border: 1px solid purple;
+}*/
 
-/* ===== STYLING TO SET UP HTML ===== */
+/* ===== PAGE ELEMENTS ===== */
 
-* {
-    /*border: 1px solid darkorange;*/
-    padding: 10px;
+    body {
+        background-image: url('images/tablecloth.jpg');
+        background-size: cover;
+        background-color: #c30;
+        font-family: 'Habibi', serif;
+    }
+
+    h1 {
+        margin: 0 0 1.25em 0;
+        text-align: center;
+    }
+
+    h3 {
+        margin: 2em 0 0.25em 0;
+        color: #145214;
+        text-transform: uppercase;
+    }
+
+    .moneyFormat {
+        text-align: right;
+        font-weight: bold;
+    }
+
+/* ===== MAIN CONTAINER, MENU, ORDER FORM ===== */
+
+    main {
+        margin: 3% auto;
+        width: 85%;
+        background: #1e7b1e;
+    }
+
+    .menu {
+        display: block;
+        margin: 20px 5%;
+        padding: 5%;
+        background: #f4efbe;
+        border: 6px solid #1e7b1e;
+    }
+
+    .order-form {
+        line-height: 1.4em;
+    }
+
+    input {
+        margin: 0 12px;
+        vertical-align: middle;
+    }
+
+    .priceInfo {
+        font-style: italic;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .button-container {
+        margin-top: 20px;
+        clear: both;
+    }
+
+/*===== BUTTONS =====*/
+
+    button {
+        height: 50px;
+        width: 125px;
+        margin: 5px;
+        padding: 0.75em 1.25em;
+        border: none;
+        border-radius: 30px;
+        background: #1e7b1e;
+        color: #fff;
+        font-family: inherit;
+        font-size: 1.05em;
+        cursor: pointer;
+    }
+
+    button:disabled {
+        background: #456845;
+        color: #aaa;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    form button {
+        margin-top: 20px;
+    }
+
+    .cart button {
+        width: 150px;
+    }
+
+    .cancelBtn {
+        background: #ff4d4d;
+        border-radius: 10px;
+    }
+
+
+/*===== CART =====*/
+
+    .cart {
+        background: #fbfae9;
+        margin: 10px auto;
+        border: 2px solid #c30;
+        border-radius: 15px;
+        padding: 20px;
+        width: 60%;
+        z-index: 200;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .tableHeadings {
+        padding: 5px;
+        background: #992600;
+        color: #fff;
+        font-size: 0.85em;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    td {
+        border-bottom: 1px dotted #666;
+    }
+
+    /* class assigned in JS */
+    .itemColumn {
+        width: 70%;
+    }
+
+    /* class assigned in JS */
+    .priceColumn {
+        width: 30%;
+    }
+
+    /* class assigned in JS */
+    .categoryCell {
+        padding-top: 0.75em;
+        border: none;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #1e7b1e;
+    }
+
+    /* class assigned in JS */
+    .itemCell {
+        padding: 0.25em 0.25em 0.25em 0.75em;
+    }
+
+    .tableTotal {
+        background: #d5ff80;
+        margin: 0.5em 0 1em 0;
+            color: #145214;
+        font-size: 1.25em;
+    }
+
+
+/*===== GUARANTEE (<details>) =====*/
+
+details {
+    margin: 15px 0;
 }
 
-h3 {
-    text-transform: uppercase;
+details summary {
+    font: 1.5em 'Satisfy', cursive;
 }
 
-.order-form {
-    background: lawngreen; 
-}
-
-.menu {
-    background: pink;
-}
-
-.button-container {
-    background: yellow;
-}
-
-button {
-    background: lightblue;
-}
-
-.cart {
-    background: turquoise;
-}
-
-.cart div {
-    background: lightsteelblue;
-    margin: 5px;
-}
-
-.itemInfo {
-   font-style: italic;
-}
-
-.cart span {
-    display: inline-block;
-}
-
-.priceInfo {
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.itemized {
-    text-align: right;
-    margin-left: 25px;
-}
-
-table, th, td {
-    width: 100%;
-    border: 1px solid black;
-}
-
-
-.orderTotal {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.moneyFormat {
-    text-align: right;
-}
-
-.orderCategory {
-    font-weight: bold;
-    color: green;
-}
-
-.itemColumn {
-    width: 75%;
-}
-
-.priceColumn {
-    width: 25%;
-}
-
-footer{
-    white-space: pre;
-}
-
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-.modal div {
+details p {
+    margin-bottom: 25px;
+    font-style: italic;
     text-align: center;
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 25px 40px 90px 40px;
-    border: 1px solid #888;
-    border-radius: 10px;
-    width: 55%; /* Could be more or less, depending on screen size */
 }
 
-.closeBtn {
-    color: #c30;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+/*===== FOOTER STYLING =====*/
 
-.closeBtn:hover,
-.closeBtn:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+    footer {
+        width: 100%;
+        padding: 1px;
+        margin: 40px auto 0 auto;
+        background: #fff;
+    }
+
+    footer div {
+        margin: 10px auto;
+        width: 95%;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0.85em;
+        line-height: 0;
+    }
+
+    footer img {
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+
+    footer span {
+        margin: 0 10px;
+    }
+
+
+/*===== MODALS =====*/
+
+    .confModal, .cartModal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+
+    .confMessage {
+        font:  2em/2em 'Satisfy', cursive;
+        text-align: center;
+        background: #fbfae9;
+        margin: 10% auto;
+        padding: 25px 20px 60px 10px;
+        border: 2px solid #c30;
+        border-radius: 10px;
+        width: 55%;
+    }
+
+    .closeBtn {
+        font: bold 1.5em Arial, Helvetica, sans-serif;
+        color: #c30;
+        float: right;
+    }
+
+    .closeBtn:hover,
+    .closeBtn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }

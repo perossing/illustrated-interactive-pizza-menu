@@ -8,140 +8,144 @@
     <meta name="author" content="Peter Rossing: TechAcademy lesson, May 2017" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css?family=Habibi|Satisfy" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="pizza-menu_style.css" />
 </head>
 
 <body>
 
     <main class="container">
+        <div class="menu">
 
-        <form class="order-form">
+            <h1>Time for pizza &ndash; place your order online!</h1>
 
-            <h1>place your order online!</h1>
-            <section id="size">
-                <h3>size:</h3>
-                <input type="radio" name="size" value="personal">
-                <span class="itemName">personal pizza<span class="itemInfo">( 8" )</span>
-                </span>
-                <span class="moneyFormat">$6.00</span><br>
+            <form class="order-form">
 
-                <input type="radio" name="size" value="medium"><span class="itemName">medium pizza
-                    <span class="itemInfo">( 12" )</span>
-                </span>
-                <span class="moneyFormat">$10.00</span><br>
+                <section id="size">
+                    <h3>size:</h3>
+                    <input type="radio" name="size" value="personal">personal pizza (8")
+                    <span class="moneyFormat">$6.00</span><br>
 
-                <input type="radio" name="size" value="large" checked><span class="itemName">large pizza
-                    <span class="itemInfo">( 16" )</span>
-                </span>
-                <span class="moneyFormat">$14.00</span><br>
+                    <input type="radio" name="size" value="medium">medium pizza (12")
+                    <span class="moneyFormat">$10.00</span><br>
 
-                <input type="radio" name="size" value="extra large"><span class="itemName">extra-large pizza
-                    <span class="itemInfo">( 20" )</span>
-                </span>
-                <span class="moneyFormat">$16.00</span><br>
-            </section>
+                    <input type="radio" name="size" value="large" checked>large pizza (16")
+                    <span class="moneyFormat">$14.00</span><br>
 
-            <section id="meats">
-                <h3>meats:</h3>
-                <span class="priceInfo">one item included, each additional item + $1.00</span><br>
-                <input type="checkbox" value="anchovy">anchovy<br>
-                <input type="checkbox" value="canadian bacon">canadian bacon<br>
-                <input type="checkbox" value="chicken">chicken<br>
-                <input type="checkbox" value="ground beef">ground beef<br>
-                <input type="checkbox" value="pepperoni">pepperoni<br>
-                <input type="checkbox" value="sausage">sausage <br>
-            </section>
+                    <input type="radio" name="size" value="extra large">extra-large pizza (20")
+                    <span class="moneyFormat">$16.00</span><br>
+                </section>
 
-            <section id="veggies">
-                <h3>veggies:</h3>
-                <span class="priceInfo">one item included, each additional item + $1.00</span><br>
-                <input type="checkbox" value="black olives">black olives<br>
-                <input type="checkbox" value="green peppers">green peppers<br>
-                <input type="checkbox" value="jalapeno">jalapeno<br>
-                <input type="checkbox" value="mushrooms">mushrooms<br>
-                <input type="checkbox" value="onions">onions <br>
-                <input type="checkbox" value="pineapple">pineapple<br>
-                <input type="checkbox" value="spinach">spinach<br>
-                <input type="checkbox" value="tomatoes">tomatoes<br>
+                <section id="meats">
+                    <h3>meats:</h3>
+                    <span class="priceInfo">no charge for first selection, each additional item + $1.00</span><br>
+                    <input type="checkbox" value="anchovy">anchovy<br>
+                    <input type="checkbox" value="canadian bacon">canadian bacon<br>
+                    <input type="checkbox" value="chicken">chicken<br>
+                    <input type="checkbox" value="ground beef">ground beef<br>
+                    <input type="checkbox" value="pepperoni">pepperoni<br>
+                    <input type="checkbox" value="sausage">sausage <br>
+                </section>
 
-            </section>
+                <section id="veggies">
+                    <h3>veggies:</h3>
+                    <span class="priceInfo">no charge for first selection, each additional item + $1.00</span><br>
+                    <input type="checkbox" value="black olives">black olives<br>
+                    <input type="checkbox" value="green peppers">green peppers<br>
+                    <input type="checkbox" value="jalapeno">jalapeno<br>
+                    <input type="checkbox" value="mushrooms">mushrooms<br>
+                    <input type="checkbox" value="onions">onions <br>
+                    <input type="checkbox" value="pineapple">pineapple<br>
+                    <input type="checkbox" value="spinach">spinach<br>
+                    <input type="checkbox" value="tomatoes">tomatoes<br>
 
-            <section id="cheese">
-                <h3>cheese:</h3>
-                <input type="radio" name="cheese" value="regular" checked>regular cheese<br>
-                <input type="radio" name="cheese" value="none">no cheese<br>
-                <input type="radio" name="cheese" value="extra cheese">extra cheese
-                <span class="moneyFormat">+ $3.00</span><br>
-            </section>
+                </section>
 
-            <section id="sauce">
-                <h3>sauce:</h3>
-                <input type="radio" name="sauce" value="marinara" checked>marinara sauce<br>
-                <input type="radio" name="sauce" value="white">white sauce<br>
-                <input type="radio" name="sauce" value="barbeque">barbeque sauce<br>
-                <input type="radio" name="sauce" value="none">no sauce<br>
-            </section>
+                <section id="cheese">
+                    <h3>cheese:</h3>
+                    <input type="radio" name="cheese" value="regular" checked>regular cheese<br>
+                    <input type="radio" name="cheese" value="none">no cheese<br>
+                    <input type="radio" name="cheese" value="extra cheese">extra cheese
+                    <span class="moneyFormat">+ $3.00</span><br>
+                </section>
 
-            <section id="crust">
-                <h3>crust:</h3>
-                <input type="radio" name="crust" value="plain" checked>plain crust<br>
-                <input type="radio" name="crust" value="house special">house special crust<br>
-                <input type="radio" name="crust" value="garlic butter">garlic butter crust<br>
-                <input type="radio" name="crust" value="spicy">spicy crust<br>
-                <input type="radio" name="crust" value="cheese-stuffed">cheese-stuffed crust
-                <span class="moneyFormat">+ $3.00</span><br>
-            </section>
+                <section id="sauce">
+                    <h3>sauce:</h3>
+                    <input type="radio" name="sauce" value="marinara" checked>marinara sauce<br>
+                    <input type="radio" name="sauce" value="white">white sauce<br>
+                    <input type="radio" name="sauce" value="barbeque">barbeque sauce<br>
+                    <input type="radio" name="sauce" value="none">no sauce<br>
+                </section>
 
-        </form><br>
+                <section id="crust">
+                    <h3>crust:</h3>
+                    <input type="radio" name="crust" value="plain" checked>plain crust<br>
+                    <input type="radio" name="crust" value="house special">house special crust<br>
+                    <input type="radio" name="crust" value="garlic butter">garlic butter crust<br>
+                    <input type="radio" name="crust" value="spicy">spicy crust<br>
+                    <input type="radio" name="crust" value="cheese-stuffed">cheese-stuffed crust
+                    <span class="moneyFormat">+ $3.00</span><br>
+                </section>
 
-        <div class="button-container">
-            <button id="viewOrder" onclick="displayCheckedItems()">view order</button>
-            <button onclick="resetMenu()">start over</button>
+                <div class="button-container">
+                    <button id="viewOrder" onclick="displayCheckedItems()">view order</button>
+                    <button onclick="resetMenu()">start over</button>
+                </div>
+
+
+            </form><br>
+
+
+            <div class="cartModal">
+                <div class="cart">
+                    <table class="tableHeadings">
+                        <tr>
+                            <th class="itemColumn">your selections:</th>
+                            <th class="priceColumn">price:</th>
+                        </tr>
+                    </table>
+                    <table id="orderSummary">
+                        <!--insert rows w items & prices here-->
+                    </table>
+
+                    <table class="tableTotal">
+                        <tr>
+                            <td class="moneyFormat itemColumn">total:</td>
+                            <td class="priceColumn moneyFormat" id="orderTotal">
+                                <!--insert total here-->
+                            </td>
+                        </tr>
+                    </table>
+
+                    <details>
+                        <summary>our guarantee:</summary>
+                        <p>If you are not completely satisfied with your pizza or our service, your next pizza will be free!</p>
+                    </details>
+
+                    <button class="cancelBtn" onclick="hideCartModal()">cancel order</button>
+
+                    <button id="submitOrder" class="submitBtn" onclick="confirmOrder()">submit order</button>
+
+                </div>
+            </div>
         </div>
-
-        <div class="cart">
-            <table>
-                <tr>
-                    <th class="itemColumn">your order:</th>
-                    <th class="priceColumn">price:</th>
-                </tr>
-                <!--insert rows w items & prices here-->
-            </table>
-            <table id="orderSummary">
-                <!--insert rows w items & prices here-->
-            </table>
-
-            <table>
-                <tr>
-                    <td class="moneyFormat itemColumn">ORDER TOTAL:</td>
-                    <td class="orderTotal priceColumn moneyFormat">
-                        <!--insert total here-->
-                    </td>
-                </tr>
-            </table>
-
-
-
-            <details>
-                <summary>our guarantee:</summary>
-                <p>Ut id qui dolor ex enim adipisicing ullamco exercitation duis. In qui ullamco ex anim irure ipsum ea fugiat
-                    sit nostrud pariatur ipsum. Cillum laboris enim sunt irure qui.</p>
-            </details>
-            <button id="submitOrder" disabled onclick="confirmOrder()">submit order</button>
-        </div>
-
     </main>
 
-
-    <aside id="confirmation" class="modal">
-        <div>
-            <p>Thank you for your order.</p>
-            <p>Enjoy your pizza!</p>
+    <aside id="confirmation" class="confModal">
+        <div class="confMessage">
+            <p>Thank you for your order.<br>
+                Enjoy your pizza !</p>
             <span class="closeBtn">&times;</span>
         </div>
     </aside>
 
-    <footer>PizzaGate   &#124;   314 Appian Way   &#124;   206-555-1212</footer>
+
+    <footer>
+        <div>
+            <img src="images/pizzagate.png" height="70" width="45" alt="iron gate">PizzaGate <span>&#124;</span> 314 Appian
+            Way <span>&#124;</span> 206-555-1212
+        </div>
+    </footer>
 
     <script src="pizza-menu.js"></script>
 </body>
