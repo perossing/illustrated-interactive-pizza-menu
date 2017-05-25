@@ -88,7 +88,7 @@
                 </section>
 
                 <div class="button-container">
-                    <button id="viewOrder" onclick="displayCheckedItems()">view order</button>
+                    <button class="viewOrder" onclick="displayCheckedItems()">view order</button>
                     <button onclick="resetMenu()">start over</button>
                 </div>
 
@@ -104,15 +104,15 @@
                             <th class="priceColumn">price:</th>
                         </tr>
                     </table>
-                    <table id="orderSummary">
-                        <!--insert rows w items & prices here-->
+                    <table class="orderSummary">
+                        <!-- JS inserts rows w items & prices here-->
                     </table>
 
                     <table class="tableTotal">
                         <tr>
                             <td class="moneyFormat itemColumn">total:</td>
                             <td class="priceColumn moneyFormat" id="orderTotal">
-                                <!--insert total here-->
+                                <!-- JS inserts total here-->
                             </td>
                         </tr>
                     </table>
@@ -123,8 +123,7 @@
                     </details>
 
                     <button class="cancelBtn" onclick="hideCartModal()">cancel order</button>
-
-                    <button id="submitOrder" class="submitBtn" onclick="confirmOrder()">submit order</button>
+                    <button class="submitBtn" onclick="confirmOrder()">submit order</button>
 
                 </div>
             </div>

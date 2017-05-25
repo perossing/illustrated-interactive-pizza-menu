@@ -1,5 +1,4 @@
 
-
 const pricing = {
     'personal': 6,
     'medium': 10,
@@ -11,9 +10,9 @@ const pricing = {
 };
 
 const menuSections = document.querySelectorAll('form > section');
-const orderTable = document.querySelector('#orderSummary');
-const viewOrderButton = document.querySelector('#viewOrder');
-const submitOrderButton = document.querySelector('#submitOrder');
+const orderTable = document.querySelector('.orderSummary');
+const viewOrderButton = document.querySelector('.viewOrder');
+const submitOrderButton = document.querySelector('.submitBtn');
 const cartModal = document.querySelector('.cartModal');
 const confirmationModal = document.querySelector('.confModal');
 const cancelBtn = document.querySelector('.cancelBtn');
@@ -22,9 +21,11 @@ const closeModalBtn = document.querySelector('.closeBtn');
 let orderArr = [];
 
 
+viewOrderButton.addEventListener('click', function(event){
+    event.preventDefault()
+});
+
 const displayCheckedItems = () => {
-    viewOrderButton.disabled = true;
-    submitOrderButton.disabled = false;
     for (let i = 0; i < menuSections.length; i++) {
         createCategoryRows(i);
         const menuOptions = menuSections[i].querySelectorAll('input');
@@ -102,7 +103,6 @@ const getitemPriceCells = () => {
 };
 
 const resetMenu = () => {
-    viewOrderButton.disabled = false;
     orderTable.innerHTML = '';
     document.querySelector('form').reset();
     orderArr = [];
