@@ -9,7 +9,7 @@ const pricing = {
     'extra cheese': 3
 };
 
-const menuSections = document.querySelectorAll('form > section');
+const menuSections = document.querySelectorAll('section');
 const orderTable = document.querySelector('.orderSummary');
 const viewOrderButton = document.querySelector('.viewOrder');
 const submitOrderButton = document.querySelector('.submitBtn');

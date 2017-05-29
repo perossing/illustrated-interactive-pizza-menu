@@ -9,21 +9,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
     <link href="https://fonts.googleapis.com/css?family=Habibi|Satisfy" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="pizza-menu_style.css" />
+    <link rel="stylesheet" type="text/css" href="pizza-menu_style_w-graphics.css" />
 </head>
 
 <body>
 
     <main>
 
-        <div class="pizza-graphic flex-item">
-            <div class="pizza">
-            </div>
-        </div>
-
         <h1>Time for pizza &ndash; place your order online!</h1>
-        <div class="menu">
 
+<!--===== WORK ON THIS DIV FOR LAYOUT =====-->
+<div class="holds-menu-and-pizza">
+        <div class="menu">
             <form class="order-form">
 
                 <div class="flex-container">
@@ -61,6 +58,7 @@
                         <input type="radio" name="sauce" value="none">no sauce<br>
                     </section>
 
+
                     <section class="flex-item" id="cheese">
                         <h3>cheese:</h3>
                         <input type="radio" name="cheese" value="regular" checked>regular cheese<br>
@@ -68,7 +66,6 @@
                         <input type="radio" name="cheese" value="extra cheese">extra cheese
                         <span class="moneyFormat">+ $3.00</span><br>
                     </section>
-
 
                     <section class="flex-item" id="meats">
                         <h3>meats:</h3>
@@ -92,7 +89,10 @@
                         <input type="checkbox" value="pineapple">pineapple<br>
                         <input type="checkbox" value="spinach">spinach<br>
                         <input type="checkbox" value="tomatoes">tomatoes<br>
+
                     </section>
+
+
 
                 </div>
 
@@ -138,6 +138,14 @@
             </div>
 
         </div>
+
+        <div class="pizza-graphic">
+            <div class="pizza">
+            </div>
+        </div>
+</div>
+
+
     </main>
 
     <aside id="confirmation" class="confModal">
@@ -150,12 +158,12 @@
 
     <footer>
         <div>
-            <img src="images/pizzagate.png" height="70" width="45" alt="iron gate">PizzaGate <span>&#124;</span> 314 Appian
+            <img src="../images/pizzagate.png" height="70" width="45" alt="iron gate">PizzaGate <span>&#124;</span> 314 Appian
             Way <span>&#124;</span> 206-555-1212
         </div>
     </footer>
 
-    <script src="pizza-menu.js"></script>
+    <script src="../pizza-menu.js"></script>
 </body>
 
 

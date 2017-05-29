@@ -14,8 +14,7 @@
     h1 {
         text-align: center;
         color: #fff;
-        max-width: 90%;
-        margin: 20px auto;
+        margin: 20px;
     }
 
     h3 {
@@ -32,7 +31,7 @@
 /* ===== MAIN CONTAINER, MENU, ORDER FORM ===== */
 
     main {
-        margin: 3% auto;
+        margin: 2% auto;
         padding: 0.25em 0 50px 0;
         width: 95%;
         border-radius: 10px;
@@ -40,10 +39,12 @@
     }
 
     .menu {
-        margin: 25px 5%;
+        margin: 10px 20px;
         padding: 25px;
         padding-bottom: 0;
         background: #f4efbe;
+        max-width: 600px;
+        display: inline-block;
     }
 
     .order-form {
@@ -275,4 +276,35 @@
     max-height: 275px;
     min-width: 265px;
     margin-bottom: 15px;
+    order: 3;
+
+}
+
+
+
+
+.holds-menu-and-pizza {
+    /*border: 1px solid pink;*/
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+.pizza-graphic {
+    display: inline-block;
+    width: 425px;
+    height: 650px;
+    vertical-align: top;
+    margin: 10px 0;
+    background: #f4efbe;
+    padding: 40px 0 75px 0;
+}
+
+.pizza {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    border: 10px solid goldenrod;
+    background: maroon;
+    margin: 0 auto;
 }
