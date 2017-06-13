@@ -5,7 +5,7 @@
 /* ===== PAGE ELEMENTS ===== */
 
     body {
-        background-image: url('images/tablecloth.jpg');
+        background-image: url('../images/tablecloth.jpg');
         background-size: cover;
         background-color: #c30;
         font-family: 'Habibi', serif;
@@ -31,20 +31,20 @@
 /* ===== MAIN CONTAINER, MENU, ORDER FORM ===== */
 
     main {
-        margin: 2% auto;
-        padding: 0.25em 0 50px 0;
+        margin: 30px auto;
+        padding: 10px;
         width: 95%;
+        max-width: 1400px;
         border-radius: 10px;
         background: #1e7b1e;
     }
 
     .menu {
-        margin: 10px 20px;
-        padding: 25px;
-        padding-bottom: 0;
+        margin: 25px auto;
+        padding: 25px 10px 0 25px;
         background: #f4efbe;
-        max-width: 600px;
-        display: inline-block;
+        max-width: 90%;
+        display: block;
     }
 
     .order-form {
@@ -68,7 +68,6 @@
     }
 
     .button-container {
-        margin: 20px 20px;
         float: right;
     }
 
@@ -76,7 +75,7 @@
 
     button {
         height: 50px;
-        width: 125px;
+        width: 135px;
         margin: 5px;
         padding: 0.75em 1.25em;
         border: none;
@@ -84,7 +83,7 @@
         background: #1e7b1e;
         color: #fff;
         font-family: inherit;
-        font-size: 1.05em;
+        font-size: 1.1em;
         cursor: pointer;
     }
 
@@ -116,7 +115,7 @@
         padding: 20px;
         width: 60%;
         max-width: 500px;
-        z-index: 200;
+        z-index: 250;
     }
 
     table {
@@ -226,7 +225,7 @@
     .confModal, .cartModal {
         display: none;
         position: fixed;
-        z-index: 1;
+        z-index: 200;
         left: 0;
         top: 0;
         width: 100%;
@@ -266,45 +265,187 @@
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .flex-item {
     flex: auto;
     justify-content: flex-start;
-    max-width: 65%;
     max-height: 275px;
-    min-width: 265px;
     margin-bottom: 15px;
-    order: 3;
-
+    order: 1;
+    flex-grow: 1;
 }
 
 
 
+/*===== PIZZA GRAPHIC =====*/
 
-.holds-menu-and-pizza {
-    /*border: 1px solid pink;*/
-    width: 95%;
-    margin: 0 auto;
-}
-
-
-.pizza-graphic {
-    display: inline-block;
-    width: 425px;
-    height: 650px;
-    vertical-align: top;
-    margin: 10px 0;
-    background: #f4efbe;
-    padding: 40px 0 75px 0;
+.pizza-frame {
+    width: 400px;
+    min-height: 410px;
+    order: 2;
 }
 
 .pizza {
+    height: 375px;
+	width: 375px;
+    margin: 12.5px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#pizza-crust {
+    fill: #e9cd96;
+    stroke: #e0c285;
+}
+
+#pizza-sauce {
+    fill: #d13f16;
+}
+
+.pizza-size {
+    position: relative;
+    border-radius: 50%;
+    z-index: 10;
+    margin: auto;
+    bottom: 5px;
+}
+
+.size-personal {
+    height: 260px;
+    width: 260px;
+}
+
+.size-medium {
+    height: 295px;
+    width: 295px;
+    right: 17px;
+    bottom: 17px;
+}
+
+.size-large {
+    height: 325px;
+    width: 325px;
+    right: 15px;
+    bottom: 15px;
+    overflow: hidden;
+}
+
+.size-xlarge {
     height: 350px;
     width: 350px;
-    border-radius: 50%;
-    border: 10px solid goldenrod;
-    background: maroon;
-    margin: 0 auto;
+    right: 10px;
+    bottom: 20px;
+}
+
+.toppings img {
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    display: none;
+    z-index: 25;
+}
+
+.meat-toppings img {
+    top: 6px;
+    left: -5px;
+}
+
+.veg-toppings img {
+    top: 3px;
+}
+
+#img-cheese {
+    display: block;
+}
+
+
+/*===== MEDIA QUERIES =====*/
+
+@media (max-width: 800px) {
+    .flex-item {
+        min-width: 260px;
+    }
+    .pizza-frame {
+        display: none;
+    }
+}
+
+@media (min-width: 400px) and (min-width: 800px) {
+    .flex-item {
+        order: 3;
+        max-width: 330px;
+        min-width: 265px;
+    }
+    .item1 {
+        order: 0;
+        max-width: 265px;
+    }
+    .pizza-frame {
+        display: flex;
+        order: 2;
+        max-width: 400px;
+    } 
+    .button-container {
+        padding-top: 55%;
+    }
+}
+
+@media (min-width: 900px) { 
+    main {
+        width: 90%;
+    }
+    .menu {
+        padding: 35px 25px 15px 40px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .flex-item {
+        width: 250px;
+    }
+    .item1 {
+        padding-top: 10%;
+    }
+    .pizza-frame {
+        min-width: 400px;
+    }
+    .button-container {
+        padding-top: 25%;
+    }
+}
+
+@media (min-width: 1165px) {
+    .flex-container {
+        justify-content: space-around;
+    }
+    .item1, .item2 {
+        order: 0;
+        max-width: 330px;
+        padding-top: 13%;
+    }
+    /*.item3, .item4 {
+        position: relative;
+        top: -150px;
+    }*/
+}
+
+@media (min-width: 1250px) { 
+    .menu {
+        max-width: 85%;
+        padding: 40px 25px 20px 40px;
+    }
+}
+
+@media (min-width: 1402px) {
+    .button-container {
+        padding-top: 30px;
+    }
+    section {
+        font-size: 1.05rem;
+        line-height: 1.5em
+    }
 }

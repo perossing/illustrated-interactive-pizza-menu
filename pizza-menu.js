@@ -1,4 +1,3 @@
-
 const pricing = {
     'personal': 6,
     'medium': 10,
@@ -21,7 +20,7 @@ const closeModalBtn = document.querySelector('.closeBtn');
 let orderArr = [];
 
 // Need preventDefault on viewOrderButton so browsers retain display settings for cartModal
-viewOrderButton.addEventListener('click', function(event){
+viewOrderButton.addEventListener('click', function (event) {
     event.preventDefault()
 });
 
@@ -106,6 +105,7 @@ const resetMenu = () => {
     orderTable.innerHTML = '';
     document.querySelector('form').reset();
     orderArr = [];
+    hideToppings();
 };
 
 const confirmOrder = () => {
@@ -129,4 +129,30 @@ const hideConfModal = () => {
 const hideCartModal = () => {
     cartModal.style.display = 'none';
     resetMenu();
+};
+
+
+const hideToppings = () => {
+    const cheeseImg = document.querySelector('#img-cheese');
+    const xCheeseImg = document.querySelector('#img-xtracheese');
+    for (let i = 0; i < vegBoxes.length; i++) {
+        (vegPics[i]).style.display = 'none';
+    }
+    for (let i = 0; i < meatBoxes.length; i++) {
+        (meatPics[i]).style.display = 'none';
+    }
+    cheeseImg.style.display = 'block';
+    xCheeseImg.style.display = 'none';
+    sauce.style.fill = sauceTypes[0];
+    $(crust).css({
+        'fill': crustTypes[0],
+        'stroke-width': 1,
+        'stroke': '#e0c285',
+    });
+    $(pizzaBg).css({
+        'width': sizeDimensions[2],
+        'height': sizeDimensions[2],
+        'margin': (400 - sizeDimensions[2]) / 2,
+    });
+    $('.pizza-size').css('overflow', 'visible');
 };

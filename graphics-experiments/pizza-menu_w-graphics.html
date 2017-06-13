@@ -18,14 +18,12 @@
 
         <h1>Time for pizza &ndash; place your order online!</h1>
 
-<!--===== WORK ON THIS DIV FOR LAYOUT =====-->
-<div class="holds-menu-and-pizza">
         <div class="menu">
             <form class="order-form">
 
                 <div class="flex-container">
 
-                    <section class="flex-item" id="size">
+                    <section class="flex-item item1" id="size">
                         <h3>size:</h3>
                         <input type="radio" name="size" value="personal">personal pizza (8")
                         <span class="moneyFormat">$6.00</span><br>
@@ -40,7 +38,7 @@
                         <span class="moneyFormat">$16.00</span><br>
                     </section>
 
-                    <section class="flex-item" id="crust">
+                    <section class="flex-item item2" id="crust">
                         <h3>crust:</h3>
                         <input type="radio" name="crust" value="plain" checked>plain crust<br>
                         <input type="radio" name="crust" value="house special">house special crust<br>
@@ -50,21 +48,21 @@
                         <span class="moneyFormat">+ $3.00</span><br>
                     </section>
 
-                    <section class="flex-item" id="sauce">
+                    <section class="flex-item item3" id="sauce">
                         <h3>sauce:</h3>
                         <input type="radio" name="sauce" value="marinara" checked>marinara sauce<br>
                         <input type="radio" name="sauce" value="white">white sauce<br>
-                        <input type="radio" name="sauce" value="barbeque">barbeque sauce<br>
+                        <input type="radio" name="sauce" value="pesto">pesto sauce<br>
                         <input type="radio" name="sauce" value="none">no sauce<br>
                     </section>
 
 
-                    <section class="flex-item" id="cheese">
+                    <section class="flex-item item4" id="cheese">
                         <h3>cheese:</h3>
                         <input type="radio" name="cheese" value="regular" checked>regular cheese<br>
-                        <input type="radio" name="cheese" value="none">no cheese<br>
                         <input type="radio" name="cheese" value="extra cheese">extra cheese
                         <span class="moneyFormat">+ $3.00</span><br>
+                        <input type="radio" name="cheese" value="none">no cheese<br>
                     </section>
 
                     <section class="flex-item" id="meats">
@@ -89,20 +87,69 @@
                         <input type="checkbox" value="pineapple">pineapple<br>
                         <input type="checkbox" value="spinach">spinach<br>
                         <input type="checkbox" value="tomatoes">tomatoes<br>
-
                     </section>
 
+                    <div class="flex-item last-flex">
+                        <div class="button-container">
+                            <button class="viewOrder" onclick="displayCheckedItems()">view order</button>
+                            <button onclick="resetMenu()">start over</button>
+                        </div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+                        <symbol id="pizza-svg" viewBox="0 0 105.83333 105.83334">
+                            <g transform="matrix(0.99750001,0,0,0.99750001,-41.341145,-59.349584)" id="layer1">
+                                <g id="g4894" transform="matrix(0.64656134,0,0,0.64656134,202.83601,-50.459617)">
+                                    <path id="pizza-crust" d="m -172.49484,170.32938 c -8.52011,0.87395 -15.48151,7.48225 -24.21599,7.29706 -13.19572,3.79185 -23.4786,13.57059 -32.57181,23.4033 -8.05641,8.84956 -13.46863,20.05923 -15.2717,31.89588 -2.48706,10.04793 -5.15679,20.80352 -2.00821,31.01672 1.66832,3.93006 3.98621,8.12577 2.88108,12.53265 0.17862,6.63108 4.11844,12.27518 6.87787,18.05896 3.17314,4.56838 8.03519,7.88026 10.2626,13.11124 4.8258,7.36726 13.02369,11.31545 20.33999,15.7224 15.45807,8.46005 33.80686,13.05857 51.30356,9.22086 5.8885,-1.28407 11.29845,-4.13584 16.1913,-7.57751 5.07229,-2.51917 11.29882,-1.86434 15.92962,-5.44564 7.44202,-5.22336 14.57559,-11.22931 19.66648,-18.85025 2.57744,-3.75776 4.269376,-8.03216 5.379976,-12.42454 2.26666,-5.5615 7.81171,-9.37774 8.80176,-15.5397 2.06739,-8.17355 1.77588,-16.69486 1.7764,-25.05506 -0.16258,-3.96522 -1.40033,-7.74282 -2.85545,-11.39701 -0.39254,-3.70171 -0.234,-7.52525 -1.73885,-11.02289 -4.23036,-12.84781 -12.964766,-23.75389 -23.232736,-32.35535 -4.89196,-4.86772 -9.58015,-10.6178 -16.49929,-12.57794 -6.25942,-2.1437 -12.74319,-3.72274 -18.69947,-6.66101 -4.00182,-1.0304 -8.22302,0.0578 -12.247,-0.96925 -3.42914,-0.64098 -6.45395,-2.82459 -10.07013,-2.38292 z"
+                                    />
+                                    <path id="pizza-sauce" d="m -153.55348,178.75857 c -7.62523,-1.22005 -15.19325,2.96086 -22.76495,0.76041 -12.36315,0.25234 -22.00329,6.43876 -32.16142,12.95479 -11.02856,5.62801 -17.83597,14.4833 -22.0942,24.46047 -4.44849,8.24633 -11.0444,12.90258 -10.61788,22.60888 0.56226,3.84157 3.45802,12.23713 1.49448,15.85048 -1.34933,5.86673 0.80394,11.74393 1.89656,17.46844 1.72912,4.75337 5.21561,8.79701 5.96995,13.91179 2.53447,7.59761 11.14442,13.15285 16.52171,18.73104 11.55444,11.03808 15.97666,18.93637 32.09934,19.64719 5.42437,0.24582 12.96896,0.74724 22.13107,0.7363 11.62107,3.38285 16.76209,-5.46872 21.61155,-7.53431 7.67262,-2.8522 10.63501,-3.36437 16.80237,-8.87123 3.09962,-2.69966 5.54461,-6.05976 7.50961,-9.65911 3.23811,-4.35665 8.9378,-6.41534 11.19939,-11.59729 3.65723,-6.6977 4.538446,-8.25919 6.436376,-15.60304 0.75826,-3.52116 3.58053,-11.24947 3.14148,-14.79896 0.49801,-3.34331 -0.66313,-12.80155 -1.18102,-16.22512 -0.77154,-12.27307 -4.996096,-21.80665 -11.994306,-31.75812 -3.15944,-5.41732 -10.83553,-9.55095 -16.42198,-12.88708 -4.96971,-3.34346 -6.36028,-6.07348 -10.8854,-10.0442 -3.25447,-1.83878 -7.18103,-1.86766 -10.45557,-3.70869 -2.84366,-1.36309 -4.98473,-3.98696 -8.23716,-4.44264 z"
+                                    />
+                                </g>
+                            </g>
+                        </symbol>
+                    </svg>
+
+                    <div class="flex-item pizza-frame">
+                        <svg class="pizza">
+                            <use xlink:href="#pizza-svg"></use>
+                        </svg>
+                        <div class="pizza-size size-personal">
+                            <div class="pizza-size size-medium">
+                                <div class="pizza-size size-large">
+                                    <div class="pizza-size size-xlarge">
+                                        <div class="toppings">
+                                            <img src="../images/cheese.png" id="img-cheese" class="cheesePic" height=350 width=350>
+                                            <img src="../images/cheese-extra.png" id="img-xtracheese" class="cheesePic" height=350 width=350>
+                                            <div class="meat-toppings">
+                                                <img src="../images/anchovies.png" id="monkey" style="z-index:49">
+                                                <img src="../images/canadian-bacon.png" style="z-index:41">
+                                                <img src="../images/chicken.png" style="z-index:43">
+                                                <img src="../images/groundbeef.png" style="z-index:35">
+                                                <img src="../images/pepperoni.png" style="z-index:47">
+                                                <img src="../images/sausage.png" style="z-index:45">
+                                            </div>
+                                            <div class="veg-toppings">
+                                                <img src="../images/olives.png" style="z-index:50">
+                                                <img src="../images/peppers.png" style="z-index:40">
+                                                <img src="../images/jalapenos.png" style="z-index:46">
+                                                <img src="../images/mushrooms.png" style="z-index:44">
+                                                <img src="../images/onions.png" style="z-index:42">
+                                                <img src="../images/pineapple.png" style="z-index:48">
+                                                <img src="../images/spinach.png" style="z-index:38">
+                                                <img src="../images/tomatoes.png" style="z-index:36">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
 
 
-                </div>
-
-                <div class="button-container">
-                    <button class="viewOrder" onclick="displayCheckedItems()">view order</button>
-                    <button onclick="resetMenu()">start over</button>
                 </div>
 
             </form><br>
-
 
 
             <div class="cartModal">
@@ -139,11 +186,7 @@
 
         </div>
 
-        <div class="pizza-graphic">
-            <div class="pizza">
-            </div>
-        </div>
-</div>
+
 
 
     </main>
@@ -163,6 +206,9 @@
         </div>
     </footer>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="pizza-graphics.js"></script>
     <script src="../pizza-menu.js"></script>
 </body>
 
