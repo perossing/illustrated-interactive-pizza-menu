@@ -1,4 +1,4 @@
-See Pizza-Menu_Project-Assignment.txt for project description.
+See [Pizza-Menu_Project-Assignment.txt](https://github.com/perossing/tech-academy_pizza-menu-project/blob/master/Pizza-Menu_Project-Assignment.txt) for project description.
 
 In addition to project requirements, I added:
 - Responsive layout
