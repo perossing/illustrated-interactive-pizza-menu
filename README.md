@@ -7,4 +7,5 @@ In addition to project requirements, I added:
 
 completed project in:
 FINISHED-PROJECT-w-Graphics/pizza-menu_w-graphics.html
+
 [view in browser](http://rawgit.com/perossing/tech-academy_pizza-menu-project/master/FINISHED-PROJECT-w-Graphics/pizza-menu_w-graphics.html)
